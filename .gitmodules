@@ -1,0 +1,3 @@
+[submodule "sji"]
+	path = sji
+	url = https://github.com/martin-spil-reurings/SpillJamImpress.git
