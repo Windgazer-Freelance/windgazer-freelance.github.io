@@ -38,6 +38,7 @@ body {
     padding: 1em;
     margin: 1em 1em 3em;
     width: 80ex;
+    position: relative;
     border-radius: 0 0.5em 0.5em 0.5em;
     box-shadow: 0.25em 0.25em 0.5em rgba( 0, 0, 0, 0.5 );
 }
@@ -58,18 +59,36 @@ body {
     min-height: 6em;
 }
 
-.noHomepage a::before {
+
+.gitfork {
+    position: absolute;
+    top: -0.1em;
+    right: -0.1em;
+    height: 5.4em;
+    width: 5.4em;
+    overflow: hidden;
+    text-indent: -100em;
+    opacity: 0.8;
+}
+.noHomepage a::before,
+.gitfork::before {
     position: absolute;
     top: 2.5em;
-    right: -2.5em;
+    right: 0;
+    margin-right: -2.5em;
     padding: 0 2em;
     line-height: 1.1em;
     content: "Fork me on Github";
     font-size: 75%;
+    text-decoration: none;
+    text-indent: 0;
+    white-space: nowrap;
     background: red;
     color: white;
     border: 0.1em solid rgba( 255, 255, 255, 0.75 );
     border-width: 0.1em 0;
     box-shadow: 0 0.2em 0 rgba( 255, 0, 0, 1 ), 0 -0.2em 0 rgba( 255, 0, 0, 1 ), 0 0.25em 0.2em rgba( 0, 0, 0, 0.75 ), 0 -0.25em 0.2em rgba( 0, 0, 0, 0.75 );
     -webkit-transform: rotate(45deg);
+} .gitfork:hover::before {
+    box-shadow: 0 0.2em 0 rgba( 255, 0, 0, 1 ), 0 -0.2em 0 rgba( 255, 0, 0, 1 ), 0 0.25em 0.2em rgba( 0, 0, 0, 0.9 ), 0 -0.25em 0.2em rgba( 0, 0, 0, 0.9 );
 }
