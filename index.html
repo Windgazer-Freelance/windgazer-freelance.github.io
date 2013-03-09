@@ -9,6 +9,7 @@
 	<link type="text/css" rel="stylesheet" href="layout.css" >
 </head>
 <body>
+
     <h1>Windgazer @ Github.com</h1>
     <p>Going to attempt using the Github API to generate links to all
 	projects I'm hosting @ Github :)</p>
@@ -16,7 +17,7 @@
   
 
     <script id="template1" type="text/template">
-        <li  class="`className`"><h3><a href="`link`">`title`</a></h3><p>`desc`</p></li>
+        <li  class="`className`"><h3><a href="`link`">`title`</a></h3><p>`desc`</p><a href="`repo`">`repo`</a></li>
     </script>
 
     <script src="index.js"></script>
@@ -24,4 +25,5 @@
     src="https://api.github.com/users/windgazer/repos?callback=RepoParser.parseGitRepos"></script>
     
     <a class="gitfork" href="https://github.com/windgazer/windgazer.github.com">Fork me on Github</a>
+
 </body></html>

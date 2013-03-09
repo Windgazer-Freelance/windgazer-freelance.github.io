@@ -70,7 +70,7 @@ body {
     text-indent: -100em;
     opacity: 0.8;
 }
-.noHomepage a::before,
+.repo > a::before,
 .gitfork::before {
     position: absolute;
     top: 2.5em;

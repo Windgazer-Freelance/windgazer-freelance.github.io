@@ -33,7 +33,7 @@ var RepoParser = (function(w, b) {
         
             var repo = repos[i],
                 cn = repo.homepage?"repo hasHomepage":"repo noHomepage",
-                out = parseTemplate ( template, { link: repo.homepage || repo.html_url, title: repo.name, desc: repo.description, className: cn } );
+                out = parseTemplate ( template, { link: repo.homepage || repo.html_url, repo: repo.html_url, title: repo.name, desc: repo.description, className: cn } );
             
             if ( repo.homepage ) {
                 o1 += out;
