@@ -1,20 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>Windgazer @ Github.com</title>
+	<title>Windgazer Freelance @ Github.com</title>
 	<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="layout.css" >
 </head>
 <body>
 
-    <h1>Windgazer @ Github.com</h1>
-    <p>Going to attempt using the Github API to generate links to all
-	projects I'm hosting @ Github :)</p>
+    <h1>Windgazer Freelance @ Github.com</h1>
+    <p>Dynamically fetching all known projects for Windgazer from Github!</p>
     <ul id="repoList" class="repoList"></ul>
-  
+
 
     <script id="template1" type="text/template">
         <li  class="`className`"><h3><a href="`link`">`title`</a></h3><p>`desc`</p><a href="`repo`">`repo`</a></li>
@@ -23,7 +22,7 @@
     <script src="index.js"></script>
     <script
     src="https://api.github.com/users/windgazer/repos?callback=RepoParser.parseGitRepos"></script>
-    
-    <a class="gitfork" href="https://github.com/windgazer/windgazer.github.com">Fork me on Github</a>
+
+    <a class="gitfork" href="https://github.com/windgazer-freelance/windgazer-freelance.github.io">Fork me on Github</a>
 
 </body></html>
