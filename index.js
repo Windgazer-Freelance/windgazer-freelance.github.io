@@ -1,10 +1,12 @@
 /**
  * A Parser for the github repo information :)
- * 
+ *
  */
 var RepoParser = (function(w, b) {
 
-    var tre = /`([^`]+)`/gi;
+    var tre = /`([^`]+)`/gi,
+        repos = []
+    ;
 
 	function parseTemplate( template, values ) {
 
@@ -22,19 +24,21 @@ var RepoParser = (function(w, b) {
 
     function parseRepos( inc ) {
 
-        var repos = inc.data,
-            template = document.getElementById("template1").innerHTML,
+        var template = document.getElementById("template1").innerHTML,
             o1 = "",
-            o2 = "";
+            o2 = ""
+        ;
+
+        repos.concat( inc.data );
 
         console.log(template, repos);
-        
+
         for ( var i = 0; i < repos.length; i++ ) {
-        
+
             var repo = repos[i],
                 cn = repo.homepage?"repo hasHomepage":"repo noHomepage",
                 out = parseTemplate ( template, { link: repo.homepage || repo.html_url, repo: repo.html_url, title: repo.name, desc: repo.description, className: cn } );
-            
+
             if ( repo.homepage ) {
                 o1 += out;
             } else {
@@ -42,11 +46,11 @@ var RepoParser = (function(w, b) {
             }
 
         }
-        
+
         document.getElementById( "repoList" ).innerHTML = o1 + o2;
 
     }
-    
+
     var public = {
 
         parseGitRepos: function( inc ) {
