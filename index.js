@@ -29,7 +29,7 @@ var RepoParser = (function(w, b) {
             o2 = ""
         ;
 
-        repos.concat( inc.data );
+        repos = repos.concat( inc.data );
 
         console.log(template, repos);
 
